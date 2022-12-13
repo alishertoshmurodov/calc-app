@@ -288,7 +288,7 @@ body {
      transition-duration: 0.3s
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     body {
         padding-left: 20px;
         padding-right: 20px;
