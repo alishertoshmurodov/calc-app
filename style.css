@@ -13,6 +13,7 @@ body {
     font-family: 'League Spartan', sans-serif;
     font-size: 32px;
     background-color: hsl(222, 26%, 31%);
+    max-height: 100vh;
 }
 
 .calculator-app {
