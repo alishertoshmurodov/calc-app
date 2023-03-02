@@ -272,7 +272,7 @@ function playAudio(e) {
 // key hint
 
 window.addEventListener('resize', ShowHideHint);
-document.addEventListener('load', ShowHideHint);
+ShowHideHint();
 
 
 function ShowHideHint(e) {
