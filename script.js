@@ -173,65 +173,100 @@ window.addEventListener('keydown', function (e) {
     switch (e.key) {
         case '0':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '1':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '2':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '3':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '4':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '5':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '6':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '7':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '8':
             inputNumbers(e);
+            playAudio(e);
             break;
         case '9':
             inputNumbers(e);
+            playAudio(e);
             break;
         case 'Backspace':
             deleteBtn();
+            playAudio(e);
             break;
         case 'Enter':
             totalBtn();
+            playAudio(e);
             break;
         case '.':
             dotBtn();
+            playAudio(e);
             break;
         case 'Shift':
             resetBtn();
+            playAudio(e);
             break;
         case '+':
             mathOpsStandart();
             savedEl.textContent += '+ ';
             activeOperator = 'addition';
+            playAudio(e);
             break;
         case '-':
             mathOpsStandart();
             savedEl.textContent += '- ';
             activeOperator = 'substraction';
+            playAudio(e);
             break;
         case '/':
             mathOpsStandart();
             savedEl.textContent += '/ ';
             activeOperator = 'division';
+            playAudio(e);
             break;
         case '*':
             mathOpsStandart();
             savedEl.textContent += '* ';
             activeOperator = 'multiplication';
+            playAudio(e);
             break;
     }
 });
+
+
+// typing sound
+
+const typeAudio = new Audio('/sounds/mixkit-smartphone-typing.wav');
+const buttonEls = document.querySelectorAll('.button');
+
+buttonEls.forEach(button => {
+    button.addEventListener('click', playAudio);
+});
+
+function playAudio(e) {
+    typeAudio.currentTime = 0;
+    typeAudio.play();
+}
+
+
