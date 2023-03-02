@@ -269,4 +269,22 @@ function playAudio(e) {
     typeAudio.play();
 }
 
+// key hint
+
+window.addEventListener('resize', ShowHideHint);
+document.addEventListener('load', ShowHideHint);
+
+
+function ShowHideHint(e) {
+    const keyHintEls = document.querySelectorAll('.key-hint');
+    if (window.matchMedia('(max-width: 500px)').matches) {
+        keyHintEls.forEach(element => {
+            element.style = 'display:none';
+        });
+    } else {
+        keyHintEls.forEach(element => {
+            element.removeAttribute('style');
+        });
+    }
+}
 
