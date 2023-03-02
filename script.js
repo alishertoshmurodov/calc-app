@@ -111,9 +111,6 @@ function mathOpsStandart() {
 }
 
 
-
-
-
 // total
 const totalEl = document.querySelector('.total');
 
