@@ -285,3 +285,11 @@ function ShowHideHint(e) {
     }
 }
 
+
+// load
+
+const loaderEl = document.querySelector('.loader');
+
+setTimeout(() => {
+    loaderEl.classList.add('loaded');
+}, 2000);
